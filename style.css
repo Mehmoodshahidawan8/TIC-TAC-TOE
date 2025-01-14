@@ -1,0 +1,101 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #1f4037, #99f2c8, #2c5364, #0f2027);
+    animation: gradientShift 6s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+  }
+  
+  @keyframes gradientShift {
+    0% { background: linear-gradient(to right, #1f4037, #99f2c8, #2c5364, #0f2027); }
+    50% { background: linear-gradient(to right, #0f2027, #2c5364, #99f2c8, #1f4037); }
+    100% { background: linear-gradient(to right, #1f4037, #99f2c8, #2c5364, #0f2027); }
+  }
+  
+  .game-container {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  #button-panel {
+    margin-bottom: 15px;
+  }
+  
+  .game-btn {
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: white;
+    font-size: 16px;
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .game-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .game-btn:active {
+    transform: scale(0.9);
+  }
+  
+  #game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    margin: 20px 0;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+  }
+  
+  .cell:hover {
+    background-color: #444;
+    transform: scale(1.05);
+  }
+  
+  .cell.taken {
+    cursor: not-allowed;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #status {
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
